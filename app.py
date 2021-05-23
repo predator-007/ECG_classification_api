@@ -2,12 +2,8 @@ from flask import Flask,jsonify
 from flask import Flask,request
 from keras.models import load_model
 from keras.preprocessing import image
-from keras_preprocessing.image.utils import img_to_array
 import numpy as np
-import tensorflow as tf
-import cv2
 import os
-from PIL import Image
 
 app = Flask(__name__)
 model=load_model("model.h5")
