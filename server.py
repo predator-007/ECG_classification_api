@@ -11,6 +11,7 @@ from PIL import Image
 
 app = Flask(__name__)
 model=load_model("model.h5")
+
 index = ['Fusion Beat','Normal Beat','Unknown Beat','Supraventricular ectopic Beat','Ventricular ectopic beat']
         
 
@@ -30,4 +31,4 @@ def predict_class():
     return jsonify(index[pred[0]]) 
     
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=5000)  
