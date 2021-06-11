@@ -4,11 +4,11 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
-#from flask_cors import CORS
+from flask_cors import CORS
 import tensorflow as tf
 graph=tf.compat.v1.get_default_graph()
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 
 index = ['Fusion Beat','Normal Beat','Unknown Beat','Supraventricular ectopic Beat','Ventricular ectopic beat']
         
